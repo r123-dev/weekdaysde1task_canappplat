@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Typography } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-const ReferralButton = () => {
+const refer = () => {
   return (
     <div
       style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
@@ -42,7 +42,7 @@ const ReferralButton = () => {
               textTransform: "none",
             }}
           >
-            Unlock referral asks
+            Unlock referral
           </Typography>
         </div>
       </Button>
@@ -50,4 +50,4 @@ const ReferralButton = () => {
   );
 };
 
-export default ReferralButton;
+export default refer;

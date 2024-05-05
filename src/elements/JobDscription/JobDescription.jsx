@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 /**
- * ScrollableComponent: A reusable component for displaying content with expandable functionality.
+ * JobDescription: A reusable component for displaying content with expandable functionality.
  *
  * Props:
  *  - content (required): The content to be displayed within the component.
@@ -11,7 +11,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
  *  - maxHeight (optional): String defining the maximum height of the content when collapsed (default: '5.2em').
  *  - style (optional): Object containing additional styles for the component.
  */
-const ScrollableComponent = ({
+const JobDescription = ({
   content,
   initialExpand = false,
   maxHeight = "5.2em",
@@ -68,4 +68,4 @@ const ScrollableComponent = ({
   );
 };
 
-export default ScrollableComponent;
+export default JobDescription;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Container, TextField } from "@mui/material";
 import FilterInput from "../elements/filters/filterI";
 import FilterSelector from "../elements/filters/filterS";
-const Filters = ({ filters, setFilters }) => {
+const JobFilter = ({ filters, setFilters }) => {
   // Define available filters here
   const filterOptions = [
     // Predefined filter options for job listings.
@@ -12,7 +12,6 @@ const Filters = ({ filters, setFilters }) => {
     { key: "companyName", name: "Company Name" },
     { key: "minJdSalary", name: "Min base Pay" },
     { key: "workType", name: "Work Type" },
-    // Add more filters as needed
   ];
 
   // State to track the currently selected filter
@@ -94,4 +93,4 @@ const Filters = ({ filters, setFilters }) => {
   );
 };
 
-export default Filters;
+export default JobFilter;

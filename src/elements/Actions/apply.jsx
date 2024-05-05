@@ -6,7 +6,7 @@ import BoltIcon from "@mui/icons-material/Bolt";
  * ApplyButton provides a visually appealing and easy-to-use application button for job applications.
  * It features a prominent Bolt icon to signify a quick or easy application process.
  */
-const ApplyButton = () => {
+const apply = () => {
   return (
     // Centered button container with bottom margin for spacing
     <div
@@ -39,4 +39,4 @@ const ApplyButton = () => {
   );
 };
 
-export default ApplyButton;
+export default apply;

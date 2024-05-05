@@ -11,7 +11,7 @@ import RoomOutlinedIcon from "@mui/icons-material/RoomOutlined";
  * @param {string} props.jobRole - The role being offered.
  * @param {string} props.location - The location of the job.
  */
-const JobInfo = ({ companyName, jobRole, location, imageUrl }) => {
+const Jobs = ({ companyName, jobRole, location, imageUrl }) => {
   return (
     // Container box for layout, margin top is set for spacing from the previous elements.
     <Box sx={{ mt: 2 }} display={"flex"} flexDirection={"row"}>
@@ -61,4 +61,4 @@ const JobInfo = ({ companyName, jobRole, location, imageUrl }) => {
   );
 };
 
-export default JobInfo; // Exporting JobInfo component for use in other parts of the application.
+export default Jobs; // Exporting JobInfo component for use in other parts of the application.

@@ -5,7 +5,23 @@ import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import ApplyButton from "../elements/Actions/apply";
 import ReferralButton from "../elements/Actions/refer";
 
-const JobCard = () => {
+import Jobs from "./Jobs";
+import JobDescription from "../elements/JobDscription/JobDescription";
+
+const JobCard = ({ job }) => {
+  const postedday = job.maxJdSalary % 30;
+  // Calculate estimated salary range based on available data, providing different formats based on data availability.
+  //basically using some basic techniques so that data can be distributed random and specific for posteddays and company
+
+  // estimated_salary has some values as null . so depending upon data rendering salary
+  const estimated_salary =
+    job.minJdSalary && job.maxJdSalary
+      ? `${job.minJdSalary}k - ${job.maxJdSalary}k ${job.salaryCurrencyCode}`
+      : job.minJdSalary
+      ? `${job.minJdSalary}k ${job.salaryCurrencyCode} +`
+      : job.maxJdSalary
+      ? `upto ${job.maxJdSalary}k ${job.salaryCurrencyCode}`
+      : "As per industry Standards";
   return (
     <Card
       sx={{
@@ -38,7 +54,7 @@ const JobCard = () => {
           </Typography>
         </Box>
         {/* Job information component displaying company name, location, and role. */}
-        <JobInfo
+        <Jobs
           companyName={job.companyName}
           location={job.location}
           jobRole={job.jobRole}
@@ -71,7 +87,7 @@ const JobCard = () => {
           About Us
         </Typography>
         {/* Scrollable text component for job details. */}
-        <ScrollableComponent content={job.jobDetailsFromCompany} />
+        <JobDescription content={job.jobDetailsFromCompany} />
         {/* Display minimum experience required for the job. */}
         <div sx={{ marginBottom: 2 }}>
           <Typography
@@ -94,7 +110,6 @@ const JobCard = () => {
             {job.minExp ? job.minExp + " years" : "1+years"}
           </Typography>
         </div>
-        {/* Custom button components for applying to the job and seeking referrals. */}
         <ApplyButton />
         <ReferralButton />
       </CardContent>

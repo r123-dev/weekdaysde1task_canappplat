@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchJobs, setFilteredJobs } from "../features/jobSlice.js";
+import { fetchJobs, setFilteredJobs } from "../Qualities/JobQualities.js";
 import JobCard from "./JobCard.jsx";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Container, Grid, Box } from "@mui/material";
 import Spinner from "./spinner.js";
 // Component to display a list of jobs with infinite scrolling capability.
-const JobsList = ({ filters }) => {
+const JobView = ({ filters }) => {
   // Accessing state from the Redux store.
   const { visibleJobs, isLoading, hasMore } = useSelector(
     (state) => state.jobs
@@ -86,4 +86,4 @@ const JobsList = ({ filters }) => {
   );
 };
 
-export default JobsList;
+export default JobView;
